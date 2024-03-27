@@ -6,7 +6,7 @@ package com.mywork.registrationform2;
 
 /**
  *
- * @author USER
+ * @author Eng Kazungu Tracy Chao P
  */
 
 import java.awt.*;
@@ -24,7 +24,7 @@ public class RegistrationForm2 extends JFrame implements ActionListener {
     private JTable table;
     private DefaultTableModel model;
 
-    private static final String url = "jdbc:mysql://localhost:3306/record";
+    private static final String url = "jdbc:mysql://localhost:3306/registrationform2";
     private static final String username = "root";
     private static final String password = "";
 
@@ -93,7 +93,7 @@ public class RegistrationForm2 extends JFrame implements ActionListener {
 
             try {
                 Connection connection = DriverManager.getConnection(url, username, password);
-                PreparedStatement statement = connection.prepareStatement("INSERT INTO table2 (ID, Name, Gender, Address, Contact) VALUES (?, ?, ?, ?, ?)");
+                PreparedStatement statement = connection.prepareStatement("INSERT INTO FORM2 (ID, Name, Gender, Address, Contact) VALUES (?, ?, ?, ?, ?)");
                 statement.setString(1, id);
                 statement.setString(2, name);
                 statement.setString(3, gender);
